@@ -1,0 +1,18 @@
+[project]
+name = "chatgpt_as_api"
+version = "0.1.0"
+description = "Use the OpenAI Responses API on your ChatGPT plan, through the official Sign in with ChatGPT flow"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+dependencies = ["openai>=1.60", "httpx>=0.27"]
+
+[project.scripts]
+chatgpt_as_api = "chatgpt_as_api.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["chatgpt_as_api*"]
